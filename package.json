@@ -1,0 +1,63 @@
+{
+  "name": "tutorialexg",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "lint": "eslint '*.js'",
+    "cz": "cz",
+    "lint:fix": "eslint '*.js' --fix",
+    "prettier:fix": "prettier '*.js' --write",
+    "tutorial": "nodemon index.js",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "commitizen": "^4.2.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "joi": "^17.5.0",
+    "mongoose": "^6.1.5",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.15",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
+    "prettier": "^2.5.1",
+    "prettier-eslint": "^13.0.0",
+    "prettier-eslint-cli": "^5.0.1"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint:fix",
+      "git add ."
+    ],
+    "*.js": "eslint --cache --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "description": "Tutorial task with yarn and express-generator",
+  "main": "index.js",
+  "repository": "https://github.com/MihirLathiya510/TutorialExG",
+  "author": "Mihir",
+  "license": "MIT"
+}
