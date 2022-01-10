@@ -2370,6 +2370,16 @@ http-errors@1.6.3, http-errors@~1.6.2, http-errors@~1.6.3:
     setprototypeof "1.1.0"
     statuses ">= 1.4.0 < 2"
 
+http-status-codes@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/http-status-codes/-/http-status-codes-2.2.0.tgz#bb2efe63d941dfc2be18e15f703da525169622be"
+  integrity sha512-feERVo9iWxvnejp3SEfm/+oNG517npqL2/PIA8ORjyOZjGC7TwCRQsZylciLS64i6pJ0wRYz3rkXLRwbtFa8Ng==
+
+https@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/https/-/https-1.0.0.tgz#3c37c7ae1a8eeb966904a2ad1e975a194b7ed3a4"
+  integrity sha1-PDfHrhqO65ZpBKKtHpdaGUt+06Q=
+
 human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"

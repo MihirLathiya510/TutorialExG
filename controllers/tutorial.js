@@ -1,3 +1,4 @@
+const { StatusCodes } = require('http-status-codes');
 const tutorial = require('../models/tutorial');
 const validator = require('../helpers/joischema');
 const logger = require('../loggers/prodlogger');
@@ -21,8 +22,8 @@ const getTutorial = async (req, res) => {
       res.json({ tutorialdb });
     }
   } catch (error) {
-    logger.error(error);
-    res.send(logger.error(error));
+    // logger.error(error);
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json('Somethig Went Wrong!');
   }
 };
 const getSortedTutorial = async (req, res) => {
@@ -59,28 +60,30 @@ const putTutorial = async (req, res) => {
       throw new Error('check your id');
     } else {
       const resultBody = await validator.swaggerschemasPUT.validateAsync(req.body);
-      const tutorialdb = await tutorial.updateOne({ _id: id }, resultBody);
-
-      if (!tutorialdb.matchedCount) {
-        res.send('Tutorial Not Found');
+      const tutorialdb = await tutorial.findOneAndUpdate({ _id: id }, resultBody);
+      if (!tutorialdb) {
+        throw new Error('Tutorial Not Found');
       } else {
-        res.json({
-          tutorialdb,
-        });
+        res.json(tutorialdb);
       }
     }
   } catch (error) {
-    logger.error(error);
+    if (error.message === 'check your id') {
+      res.status(StatusCodes.BAD_REQUEST).json(error.message);
+    }
+    if (error.message === 'Tutorial Not Found') {
+      res.status(StatusCodes.NOT_FOUND).json(error.message);
+    }
   }
 };
-const deleteTutorial = (req, res) => {
+const deleteTutorial = async (req, res) => {
   try {
     const id = req.params.id.match(/^[0-9a-fA-F]{24}$/);
     if (id == null) {
       throw new Error('check your id');
     }
-    const tutorialdb = tutorial.findByIdAndRemove(id);
-    if (!tutorialdb.matchedCount) {
+    const tutorialdb = await tutorial.findByIdAndRemove(id);
+    if (!tutorialdb) {
       res.send('Tutorial Not Found');
     } else {
       res.json({
@@ -95,18 +98,22 @@ const findTutorial = async (req, res) => {
   try {
     const id = req.params.id.match(/^[0-9a-fA-F]{24}$/);
     if (id == null) {
+      // logger.info(id);
       throw new Error('check your id');
     }
     const tutorialdb = await tutorial.findById(id);
     if (!tutorialdb) {
-      res.send('Tutorial Not Found');
+      throw new Error('Tutorial Not Found');
     } else {
-      res.json({
-        tutorialdb,
-      });
+      res.json(tutorialdb);
     }
   } catch (error) {
-    logger.error(error);
+    if (error.message === 'check your id') {
+      res.status(StatusCodes.BAD_REQUEST).json(error.message);
+    }
+    if (error.message === 'Tutorial Not Found') {
+      res.status(StatusCodes.NOT_FOUND).json(error.message);
+    }
   }
 };
 const findByTitleTutorial = async (req, res) => {

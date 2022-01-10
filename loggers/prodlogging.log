@@ -309,3 +309,379 @@
 {"level":"info","message":"DB connected","timestamp":"2022-01-07T13:28:56.696Z"}
 {"level":"info","message":"server is running on 3000","timestamp":"2022-01-07T13:30:52.652Z"}
 {"level":"info","message":"DB connected","timestamp":"2022-01-07T13:30:54.007Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:52:15.662Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:52:16.665Z"}
+{"level":"error","message":"check your id","stack":"Error: check your id\n    at findTutorial (/home/mihir/WorkArea/TutorialExG/controllers/tutorial.js:98:13)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at /home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:281:22\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:354:14)\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:365:14)\n    at Function.process_params (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:410:3)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:275:10)","timestamp":"2022-01-10T04:52:53.799Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:53:56.073Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:53:57.940Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:53:58.707Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:01.133Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:01.938Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:03.369Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:04.227Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:05.785Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:06.543Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:07.910Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:08.540Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:13.848Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:14.680Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:19.157Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:19.893Z"}
+{"level":"error","message":"check your id","stack":"Error: check your id\n    at findTutorial (/home/mihir/WorkArea/TutorialExG/controllers/tutorial.js:98:13)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at /home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:281:22\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:354:14)\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:365:14)\n    at Function.process_params (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:410:3)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:275:10)","timestamp":"2022-01-10T04:54:21.612Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:46.897Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:47.591Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:54:53.015Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:54:53.600Z"}
+{"level":"error","message":"check your id","stack":"Error: check your id\n    at findTutorial (/home/mihir/WorkArea/TutorialExG/controllers/tutorial.js:98:13)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at /home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:281:22\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:354:14)\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:365:14)\n    at Function.process_params (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:410:3)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:275:10)","timestamp":"2022-01-10T04:54:55.331Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:55:09.405Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:55:10.215Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:55:22.198Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:55:25.952Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:55:31.291Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:55:32.045Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:55:35.177Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:55:35.692Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:57:30.015Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:57:31.692Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:57:32.372Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:57:34.136Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T04:57:37.688Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T04:57:38.219Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:20.381Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:00:21.274Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:32.280Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:00:32.793Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:33.810Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:34.966Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:00:35.546Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:49.906Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:51.151Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:00:51.714Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:52.740Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:53.880Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:00:54.469Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:00:55.217Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:00:55.876Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:07.826Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:08.469Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:14.115Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:21.389Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:22.302Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:24.172Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:24.848Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:25.952Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:28.850Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:29.454Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:33.105Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:33.656Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:36.079Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:36.597Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:39.872Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:40.520Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:49.369Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:50.258Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:01:52.369Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:01:53.160Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:02:16.972Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:02:17.571Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:02:23.449Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:02:24.477Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:02:27.440Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:02:28.607Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:02:29.250Z"}
+{"level":"info","message":200,"timestamp":"2022-01-10T05:02:29.437Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:02:43.111Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:02:43.757Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:02:46.005Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:02:46.636Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:06:12.264Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:06:13.130Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:06:35.528Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:06:36.032Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:06:38.275Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:06:39.152Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:07:02.611Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:07:03.299Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:07:07.656Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:07:08.241Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:07:19.743Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:08:41.790Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:08:42.607Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:08:45.335Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:08:46.107Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:09:17.104Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:09:17.873Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:09:26.364Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:09:26.982Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:09:51.883Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:09:52.766Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:09:59.110Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:09:59.801Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:00.684Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:01.799Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:02.300Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:03.807Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:04.409Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:07.102Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:07.646Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:08.527Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:09.072Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:12.017Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:12.579Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:17.356Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:17.994Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:10:22.410Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:10:23.101Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:12:36.543Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:12:43.199Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:13:02.283Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:13:04.054Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:13:14.452Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:13:15.224Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:13:28.334Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:13:29.061Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:13:31.494Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:13:32.272Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:13:43.776Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:13:44.666Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:10.833Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:14:11.372Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:14.911Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:16.298Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:14:16.897Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:17.724Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:14:18.284Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:19.399Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:14:19.900Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:21.583Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:14:22.159Z"}
+{"level":"info","message":null,"timestamp":"2022-01-10T05:14:22.487Z"}
+{"level":"info","message":null,"timestamp":"2022-01-10T05:14:28.875Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:14:45.518Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:14:46.282Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:15:01.956Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:15:02.557Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:15:45.161Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:15:45.738Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:02.076Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:16:03.002Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:04.203Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:16:04.963Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:27.071Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:16:27.681Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:36.069Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:16:36.711Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:49.492Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:16:50.164Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:56.691Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:16:57.667Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:16:58.363Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:01.174Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:01.824Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:03.025Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:03.709Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:05.643Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:06.265Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:09.033Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:09.660Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:16.728Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:17.375Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:28.745Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:29.363Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:17:35.407Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:17:36.011Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:18:14.489Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:18:15.297Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:18:25.211Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:18:25.954Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:18:30.175Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:18:30.856Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:18:35.906Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:18:36.514Z"}
+{"level":"info","timestamp":"2022-01-10T05:18:43.966Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:19:15.946Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:19:17.071Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:19:19.011Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:19:19.886Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:19:24.218Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:19:24.750Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:19:43.493Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:19:44.250Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:19:53.236Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:19:54.001Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:19:58.557Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:19:59.400Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:20:01.283Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:20:02.098Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:26:59.361Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:27:00.181Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:27:05.716Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:27:06.203Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:27:07.719Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:27:08.228Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:47:46.649Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:47:47.888Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:47:58.904Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:47:59.406Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:48:02.648Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:48:03.328Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:48:05.943Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:48:06.435Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:48:11.636Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:48:12.210Z"}
+{"level":"error","message":"tutorialdb.findOne is not a function","stack":"TypeError: tutorialdb.findOne is not a function\n    at putTutorial (/home/mihir/WorkArea/TutorialExG/controllers/tutorial.js:68:29)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","timestamp":"2022-01-10T05:48:17.051Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:48:57.112Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:48:57.977Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:48:59.199Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:48:59.610Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:49:02.598Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:49:03.194Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:49:08.703Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:49:10.097Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:49:10.667Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:49:17.654Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:49:18.229Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:49:27.154Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:49:27.812Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:49:50.689Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:49:51.216Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:15.592Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:50:16.123Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:19.755Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:20.956Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:50:21.551Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:23.256Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:24.564Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:25.496Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:50:25.996Z"}
+{"level":"info","message":{"__v":0,"_id":"61d3da36bbbe24d9f8b73f52","createdAt":"2022-01-04T05:25:10.551Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T05:50:06.990Z"},"timestamp":"2022-01-10T05:50:26.251Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:50:48.623Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:50:49.280Z"}
+{"level":"info","timestamp":"2022-01-10T05:50:49.603Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:51:01.829Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:51:02.655Z"}
+{"level":"info","message":true,"timestamp":"2022-01-10T05:51:02.962Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:51:12.203Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:51:12.783Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:51:38.119Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:51:39.275Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:51:43.828Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:51:44.477Z"}
+{"level":"info","message":"61d3da36bbbe24d9f8b73f52","timestamp":"2022-01-10T05:51:49.299Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:52:20.039Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:52:21.025Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:52:23.688Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:52:24.528Z"}
+{"level":"info","message":"string","timestamp":"2022-01-10T05:52:24.708Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:52:35.609Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:52:36.429Z"}
+{"level":"info","message":"string","timestamp":"2022-01-10T05:52:36.599Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:52:47.985Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:52:48.804Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:53:09.534Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:53:10.013Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:53:11.512Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:53:12.075Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T05:53:14.696Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:54:17.678Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:54:19.035Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T05:54:19.542Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T05:54:35.394Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T05:54:46.921Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T05:54:47.680Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T05:54:52.190Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:05:14.317Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:05:15.691Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T06:10:55.141Z"}
+{"level":"error","message":"check your id","stack":"Error: check your id\n    at putTutorial (/home/mihir/WorkArea/TutorialExG/controllers/tutorial.js:60:13)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at /home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:281:22\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:354:14)\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:365:14)\n    at Function.process_params (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:410:3)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:275:10)","timestamp":"2022-01-10T06:11:07.114Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:11:30.377Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:11:31.703Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T06:11:41.211Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:11:58.389Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:11:59.204Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:12:04.682Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:12:05.288Z"}
+{"level":"info","message":false,"timestamp":"2022-01-10T06:12:06.307Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:12:21.007Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:12:21.518Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:12:25.498Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:12:26.056Z"}
+{"level":"info","message":{"__v":0,"_id":"61d3da36bbbe24d9f8b73f52","createdAt":"2022-01-04T05:25:10.551Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T06:12:06.249Z"},"timestamp":"2022-01-10T06:12:26.217Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:12:40.797Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:12:41.470Z"}
+{"level":"info","message":["61dbc264abef82a6954a0f00"],"timestamp":"2022-01-10T06:12:41.726Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:13:10.503Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:13:11.102Z"}
+{"level":"info","message":"61dbc264abef82a6954a0f00","timestamp":"2022-01-10T06:13:13.062Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:13:21.604Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:13:22.185Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:13:23.103Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:13:23.775Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:13:26.767Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:13:27.737Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:13:28.236Z"}
+{"level":"info","message":{"__v":0,"_id":"61d3da36bbbe24d9f8b73f52","createdAt":"2022-01-04T05:25:10.551Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T06:13:13.001Z"},"timestamp":"2022-01-10T06:13:28.531Z"}
+{"level":"info","message":{"__v":0,"_id":"61d3da36bbbe24d9f8b73f52","createdAt":"2022-01-04T05:25:10.551Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T06:13:28.103Z"},"timestamp":"2022-01-10T06:14:52.833Z"}
+{"level":"info","message":{"__v":0,"_id":"61d3da36bbbe24d9f8b73f52","createdAt":"2022-01-04T05:25:10.551Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T06:14:52.783Z"},"timestamp":"2022-01-10T06:15:45.462Z"}
+{"level":"info","message":{"__v":0,"_id":"61d3da36bbbe24d9f8b73f52","createdAt":"2022-01-04T05:25:10.551Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T06:15:45.386Z"},"timestamp":"2022-01-10T06:17:42.488Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:18:20.701Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:18:21.553Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:18:25.202Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:18:26.130Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:18:32.162Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:18:33.897Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:18:34.604Z"}
+{"level":"info","message":{"__v":0,"_id":"61dbc264abef82a6954a0f65","createdAt":"2022-01-10T05:21:40.896Z","description":"string","published":true,"title":"string","updatedAt":"2022-01-10T05:48:17.017Z"},"timestamp":"2022-01-10T06:18:36.654Z"}
+{"level":"info","message":{"__v":0,"_id":"61dbc264abef82a6954a0f65","createdAt":"2022-01-10T05:21:40.896Z","description":"string","published":true,"title":"dfdf","updatedAt":"2022-01-10T06:18:36.547Z"},"timestamp":"2022-01-10T06:18:41.031Z"}
+{"level":"info","message":{"__v":0,"_id":"61dbc264abef82a6954a0f65","createdAt":"2022-01-10T05:21:40.896Z","description":"string","published":true,"title":"dfdf","updatedAt":"2022-01-10T06:18:40.993Z"},"timestamp":"2022-01-10T06:18:56.406Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:19:14.025Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:19:15.032Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:16.117Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:20:17.281Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:21.473Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:20:22.400Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:24.033Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:20:24.926Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:26.799Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:20:27.619Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:30.038Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:20:31.219Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:32.653Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:20:40.016Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:20:40.722Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:21:41.738Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:21:44.600Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:21:45.919Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:21:57.643Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:21:58.336Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:22:03.480Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:22:04.127Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:22:10.965Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:22:11.646Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:22:15.061Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:22:15.744Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:22:17.826Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:22:18.449Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:24:39.688Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:24:40.651Z"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'Topology'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'topology' closes the circle","stack":"TypeError: Converting circular structure to JSON\n    --> starting at object with constructor 'Topology'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'topology' closes the circle\n    at JSON.stringify (<anonymous>)\n    at stringify (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/response.js:1119:12)\n    at ServerResponse.json (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/response.js:260:14)\n    at deleteTutorial (/home/mihir/WorkArea/TutorialExG/controllers/tutorial.js:90:11)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/layer.js:95:5)\n    at /home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:281:22\n    at param (/home/mihir/WorkArea/TutorialExG/node_modules/express/lib/router/index.js:354:14)","timestamp":"2022-01-10T06:24:42.887Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:25:06.063Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:25:06.738Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:25:12.429Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:25:13.284Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:25:17.778Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:25:18.620Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:28:34.836Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:28:35.559Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:31:12.882Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:31:13.711Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:31:17.882Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:31:18.696Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:31:32.773Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:31:33.551Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:31:59.324Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:31:59.842Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:32:02.206Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:32:02.696Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:32:18.942Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-10T06:32:19.553Z"}
