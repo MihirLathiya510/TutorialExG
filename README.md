@@ -40,13 +40,13 @@ Install the dependencies and devDependencies and start the server.
 
 ```sh
 // in TutorialCRUD Directory
-npm i
+npx yarn install
 ```
 
 For Run the app .
 
 ```sh
-npm run tutorial
+npx yarn run tutorial
 ```
 
 > Note: this uses the Swagger for documentation, runs on port 3000 with path 'http://localhost:3000/swagger'
