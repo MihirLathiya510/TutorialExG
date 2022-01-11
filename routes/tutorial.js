@@ -4,7 +4,6 @@ const router = express.Router();
 
 const {
   getTutorial,
-  getSortedTutorial,
   postTutorial,
   putTutorial,
   deleteTutorial,
@@ -91,29 +90,6 @@ const {
           }
         }
       },
-      '/tutorials/getsorted/sorted/': {
-        'get': {
-          'summary': 'Returns the list of Tutorials by updated time in DESC order',
-          'tags': ['Tutorials'],
-          'produces': [
-              'application/json'
-            ],
-          'responses': {
-            '200': {
-              'description': 'successful operation',
-              'schema': {
-                '$ref': '#/definitions/Tutorials'
-              }
-            },
-            '400': {
-              'description': 'Invalid username supplied'
-            },
-            '404': {
-              'description': 'User not found'
-            }
-          }
-        }
-      },
       '/tutorials/{id}': {
         'get': {
           'summary': 'Returns the list of Tutorials by id',
@@ -148,7 +124,7 @@ const {
           }
         }
       },
-      '/tutorials/searchbytitle/{title}': {
+      '/tutorials/search/{title}': {
         'get': {
           'summary': 'Returns the list of Tutorials by title/ search by title',
           'tags': ['Tutorials'],
@@ -316,8 +292,7 @@ const {
 // get
 router.get('/', getTutorial);
 router.get('/:id', findTutorial);
-router.get('/searchbytitle/:title', findByTitleTutorial);
-router.get('/getsorted/sorted', getSortedTutorial);
+router.get('/search/:title', findByTitleTutorial);
 // post
 router.post('/post', postTutorial);
 // put

@@ -1,6 +1,6 @@
 const { StatusCodes } = require('http-status-codes');
 const tutorial = require('../models/tutorial');
-const validator = require('../helpers/joischema');
+const validator = require('../helpers/validator');
 const logger = require('../loggers/prodlogger');
 
 const getTutorial = async (req, res) => {
@@ -24,19 +24,6 @@ const getTutorial = async (req, res) => {
   } catch (error) {
     // logger.error(error);
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json('Somethig Went Wrong!');
-  }
-};
-const getSortedTutorial = async (req, res) => {
-  try {
-    const sort = { updatedAt: -1 };
-    const tutorialdb = await tutorial.find().sort(sort);
-    if (tutorialdb) {
-      res.json({
-        tutorialdb,
-      });
-    }
-  } catch (error) {
-    logger.error(error);
   }
 };
 const postTutorial = async (req, res) => {
@@ -146,7 +133,6 @@ const findByTitleTutorial = async (req, res) => {
 
 module.exports = {
   getTutorial,
-  getSortedTutorial,
   postTutorial,
   putTutorial,
   deleteTutorial,
