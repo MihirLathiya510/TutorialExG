@@ -17,6 +17,8 @@
     "dotenv": "^10.0.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "http-status-codes": "^2.2.0",
+    "https": "^1.0.0",
     "jade": "~1.11.0",
     "joi": "^17.5.0",
     "mongoose": "^6.1.5",
@@ -57,7 +59,7 @@
   },
   "description": "Tutorial task with yarn and express-generator",
   "main": "index.js",
-  "repository": "https://github.com/MihirLathiya510/TutorialExG",
+  "repository": "",
   "author": "Mihir",
   "license": "MIT"
 }
