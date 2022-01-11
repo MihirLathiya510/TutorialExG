@@ -4,13 +4,13 @@
 
 ## Design an app to manage Tutorials
 
-This task is all about to learn the NODE.JS, And all the api works with documentation. with proper skeleton by express-generator
+This task is all about to learn the NODE.JS generated with express-generator, and all the api works with documentation.
 
 # Tech
 
 - [Node] - evented I/O for the backend
-- [Expres] - fast node.js network app framework
-- [MongoDb] - NoSQL database program
+- [Express] - fast node.js network app framework
+- [MongoDB] - NoSQL database program
 
 ## Note
 
