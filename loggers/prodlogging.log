@@ -685,3 +685,5 @@
 {"level":"info","message":"DB connected","timestamp":"2022-01-10T06:32:02.696Z"}
 {"level":"info","message":"server is running on 3000","timestamp":"2022-01-10T06:32:18.942Z"}
 {"level":"info","message":"DB connected","timestamp":"2022-01-10T06:32:19.553Z"}
+{"level":"info","message":"server is running on 3000","timestamp":"2022-01-11T09:04:21.419Z"}
+{"level":"info","message":"DB connected","timestamp":"2022-01-11T09:04:23.992Z"}
