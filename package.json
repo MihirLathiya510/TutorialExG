@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "commitizen": "^4.2.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",

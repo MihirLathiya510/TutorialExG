@@ -14,7 +14,18 @@ const swaggerschemasPUT = joi
   })
   .or('title', 'description', 'published');
 
+const registerUserSchema = joi.object().keys({
+  username: joi.string().trim().min(6).max(256).required(),
+  email: joi.string().trim().min(6).max(256).required().email(),
+  password: joi.string().min(6).required(),
+});
+const loginUserSchema = joi.object().keys({
+  email: joi.string().trim().min(6).max(256).required().email(),
+  password: joi.string().min(6).required(),
+});
 module.exports = {
   swaggerschemasPOST,
   swaggerschemasPUT,
+  registerUserSchema,
+  loginUserSchema,
 };

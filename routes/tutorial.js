@@ -1,4 +1,5 @@
 const express = require('express');
+const authToken = require('./verifytoken');
 
 const router = express.Router();
 
@@ -9,6 +10,8 @@ const {
   deleteTutorial,
   findTutorial,
   findByTitleTutorial,
+  registerUser,
+  loginUser,
 } = require('../controllers/tutorial');
 
 /**
@@ -290,14 +293,17 @@ const {
 */
 
 // get
-router.get('/', getTutorial);
-router.get('/:id', findTutorial);
-router.get('/search/:title', findByTitleTutorial);
+router.get('/', authToken, getTutorial);
+router.get('/:id', authToken, findTutorial);
+router.get('/search/:title', authToken, findByTitleTutorial);
 // post
-router.post('/post', postTutorial);
+router.post('/post', authToken, postTutorial);
+router.post('/register/user', registerUser);
+router.post('/login/user', loginUser);
+
 // put
-router.put('/put/:id', putTutorial);
+router.put('/put/:id', authToken, putTutorial);
 // delete
-router.delete('/delete/:id', deleteTutorial);
+router.delete('/delete/:id', authToken, deleteTutorial);
 
 module.exports = router;

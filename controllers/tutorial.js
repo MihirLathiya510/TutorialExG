@@ -1,8 +1,61 @@
 const { StatusCodes } = require('http-status-codes');
+const bcryptjs = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const tutorial = require('../models/tutorial');
+const user = require('../models/user');
 const validator = require('../helpers/validator');
 const logger = require('../loggers/prodlogger');
-
+// Register
+const registerUser = async (req, res) => {
+  try {
+    const resultvalidated = await validator.registerUserSchema.validateAsync(req.body);
+    // for checking the username and email
+    const usernameexist = await user.findOne({ username: resultvalidated.username });
+    if (usernameexist) {
+      return res.status(StatusCodes.BAD_REQUEST).send('username already registered');
+    }
+    const emailexist = await user.findOne({ email: resultvalidated.email });
+    if (emailexist) {
+      return res.status(StatusCodes.BAD_REQUEST).send('email already registered');
+    }
+    // encrypt the password
+    const salt = await bcryptjs.genSalt(10);
+    const hashedPassword = await bcryptjs.hash(resultvalidated.password, salt);
+    const userdb = await user({
+      username: resultvalidated.username,
+      email: resultvalidated.email,
+      password: hashedPassword,
+    });
+    userdb.save();
+    if (userdb) {
+      return res.status(StatusCodes.OK).json({ userdb });
+    }
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('something went wrong');
+  } catch (error) {
+    return res.json(error.message);
+  }
+};
+// Login
+const loginUser = async (req, res) => {
+  try {
+    const resultvalidated = await validator.loginUserSchema.validateAsync(req.body);
+    const userdata = await user.findOne({ email: resultvalidated.email });
+    if (!userdata) {
+      return res.status(StatusCodes.BAD_REQUEST).send('email doesnt existed');
+    }
+    const validpassword = await bcryptjs.compare(resultvalidated.password, userdata.password);
+    if (!validpassword) {
+      return res.status(StatusCodes.BAD_REQUEST).send('invalid password');
+    }
+    // res.send(userdata[]);
+    const token = jwt.sign({ _id: userdata._id }, process.env.TOKEN_SECRET);
+    res.header('auth-token', token);
+    return res.send(token);
+  } catch (error) {
+    return res.json(error.message);
+  }
+};
+// After login
 const getTutorial = async (req, res) => {
   try {
     let { sorting } = req.query;
@@ -138,4 +191,6 @@ module.exports = {
   deleteTutorial,
   findTutorial,
   findByTitleTutorial,
+  registerUser,
+  loginUser,
 };
