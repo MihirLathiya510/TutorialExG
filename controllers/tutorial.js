@@ -1,10 +1,51 @@
 const { StatusCodes } = require('http-status-codes');
 const bcryptjs = require('bcryptjs');
+const nodemailer = require('nodemailer');
 const jwt = require('jsonwebtoken');
 const tutorial = require('../models/tutorial');
 const user = require('../models/user');
 const validator = require('../helpers/validator');
 const logger = require('../loggers/prodlogger');
+
+const sendAnEmail = async (toEmail, otp) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'mihirlathiya510@gmail.com',
+        pass: 'mihir@510',
+      },
+    });
+    const info = await transporter.sendMail({
+      from: '"Mihir Lathiya" <mihirlathiya510@gmail.com>', // sender address
+      to: '"Mihir Lathiya" <mihirlathiya2@gmail.com>', // list of receivers
+      subject: 'Resseting Password', // Subject line
+      text: `your one time password`, // plain text body
+      html: `<b>your one time password is : ${otp}</b>`, // html body
+    });
+    // return info;
+    console.log(info.messageId);
+    return true;
+  } catch (error) {
+    // console.log(error.message);
+    return error.message;
+  }
+};
+const otpGenrator = function () {
+  const characters = 'ABCDEFGHIJLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const numbers = '0123456789';
+  let result = '';
+  const charactersLength = characters.length;
+  const numberslength = numbers.length;
+
+  for (let i = 0; i < 3; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    result += numbers.charAt(Math.floor(Math.random() * numberslength));
+  }
+
+  return result;
+};
+
 // Register
 const registerUser = async (req, res) => {
   try {
@@ -41,7 +82,7 @@ const loginUser = async (req, res) => {
     const resultvalidated = await validator.loginUserSchema.validateAsync(req.body);
     const userdata = await user.findOne({ email: resultvalidated.email });
     if (!userdata) {
-      return res.status(StatusCodes.BAD_REQUEST).send('email doesnt existed');
+      return res.status(StatusCodes.BAD_REQUEST).send('email doesnt exist');
     }
     const validpassword = await bcryptjs.compare(resultvalidated.password, userdata.password);
     if (!validpassword) {
@@ -56,6 +97,25 @@ const loginUser = async (req, res) => {
   }
 };
 // After login
+const forgetPasswordUser = async (req, res) => {
+  try {
+    const resultvalidated = await validator.resetPasswordSchema.validateAsync(req.body);
+    const userdata = await user.findOne({ email: resultvalidated.email });
+    if (!userdata) {
+      return res.status(StatusCodes.BAD_REQUEST).send('email doesnt exist');
+    }
+    // generate an otp
+    const otp = otpGenrator();
+    logger.info(otp);
+    // send an email with otp
+    const info = sendAnEmail(userdata.email, otp);
+    logger.info(info.messageId);
+    logger.info(otp);
+    return res.status(StatusCodes.OK).send(info + otp);
+  } catch (error) {
+    return res.json(error.message);
+  }
+};
 const getTutorial = async (req, res) => {
   try {
     let { sorting } = req.query;
@@ -193,4 +253,5 @@ module.exports = {
   findByTitleTutorial,
   registerUser,
   loginUser,
+  forgetPasswordUser,
 };

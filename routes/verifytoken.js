@@ -9,7 +9,7 @@ const authToken = (req, res, next) => {
     }
     const verifiedtoken = jwt.verify(token, process.env.TOKEN_SECRET);
     // console.info(verifiedtoken._id);
-    req.user = verifiedtoken;
+    req.user = verifiedtoken._id;
     return next();
   } catch (error) {
     return res.status(StatusCodes.BAD_REQUEST).send('invalid token');

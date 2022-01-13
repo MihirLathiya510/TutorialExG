@@ -12,6 +12,7 @@ const {
   findByTitleTutorial,
   registerUser,
   loginUser,
+  forgetPasswordUser,
 } = require('../controllers/tutorial');
 
 /**
@@ -300,7 +301,7 @@ router.get('/search/:title', authToken, findByTitleTutorial);
 router.post('/post', authToken, postTutorial);
 router.post('/register/user', registerUser);
 router.post('/login/user', loginUser);
-
+router.post('/forgetpassword/user', forgetPasswordUser);
 // put
 router.put('/put/:id', authToken, putTutorial);
 // delete
