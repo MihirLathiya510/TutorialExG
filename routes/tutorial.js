@@ -13,6 +13,7 @@ const {
   registerUser,
   loginUser,
   forgetPasswordUser,
+  resetPasswordUser,
 } = require('../controllers/tutorial');
 
 /**
@@ -302,6 +303,7 @@ router.post('/post', authToken, postTutorial);
 router.post('/register/user', registerUser);
 router.post('/login/user', loginUser);
 router.post('/forgetpassword/user', forgetPasswordUser);
+router.post('/resetpassword/user', resetPasswordUser);
 // put
 router.put('/put/:id', authToken, putTutorial);
 // delete

@@ -4,6 +4,7 @@ const nodemailer = require('nodemailer');
 const jwt = require('jsonwebtoken');
 const tutorial = require('../models/tutorial');
 const user = require('../models/user');
+const token = require('../models/token');
 const validator = require('../helpers/validator');
 const logger = require('../loggers/prodlogger');
 
@@ -18,14 +19,14 @@ const sendAnEmail = async (toEmail, otp) => {
     });
     const info = await transporter.sendMail({
       from: '"Mihir Lathiya" <mihirlathiya510@gmail.com>', // sender address
-      to: '"Mihir Lathiya" <mihirlathiya2@gmail.com>', // list of receivers
+      to: toEmail, // list of receivers
       subject: 'Resseting Password', // Subject line
       text: `your one time password`, // plain text body
       html: `<b>your one time password is : ${otp}</b>`, // html body
     });
     // return info;
-    console.log(info.messageId);
-    return true;
+    // logger.info(info.messageId);
+    return info.messageId;
   } catch (error) {
     // console.log(error.message);
     return error.message;
@@ -89,9 +90,9 @@ const loginUser = async (req, res) => {
       return res.status(StatusCodes.BAD_REQUEST).send('invalid password');
     }
     // res.send(userdata[]);
-    const token = jwt.sign({ _id: userdata._id }, process.env.TOKEN_SECRET);
-    res.header('auth-token', token);
-    return res.send(token);
+    const tokendb = jwt.sign({ _id: userdata._id }, process.env.TOKEN_SECRET);
+    res.header('auth-token', tokendb);
+    return res.send(tokendb);
   } catch (error) {
     return res.json(error.message);
   }
@@ -99,23 +100,51 @@ const loginUser = async (req, res) => {
 // After login
 const forgetPasswordUser = async (req, res) => {
   try {
-    const resultvalidated = await validator.resetPasswordSchema.validateAsync(req.body);
+    const resultvalidated = await validator.forgetPasswordSchema.validateAsync(req.body);
     const userdata = await user.findOne({ email: resultvalidated.email });
     if (!userdata) {
       return res.status(StatusCodes.BAD_REQUEST).send('email doesnt exist');
     }
     // generate an otp
     const otp = otpGenrator();
-    logger.info(otp);
+    // logger.info(otp);
     // send an email with otp
-    const info = sendAnEmail(userdata.email, otp);
-    logger.info(info.messageId);
-    logger.info(otp);
-    return res.status(StatusCodes.OK).send(info + otp);
+    const info = await sendAnEmail(userdata.email, otp);
+    if (info && otp) {
+      const tokendb = await token({
+        email: userdata.email,
+        otp,
+      });
+      tokendb.save();
+    }
+    return res.status(StatusCodes.OK).send('mailed you the otp');
   } catch (error) {
     return res.json(error.message);
   }
 };
+
+const resetPasswordUser = async (req, res) => {
+  try {
+    const resultvalidated = await validator.resetPasswordSchema.validateAsync(req.body);
+    const tokendb = await token.findOne({ email: resultvalidated.email });
+    if (!tokendb) {
+      return res.status(StatusCodes.BAD_REQUEST).send('have you genrated your otp? , check your email');
+    }
+    // encrypt the password
+    const salt = await bcryptjs.genSalt(10);
+    const hashedPassword = await bcryptjs.hash(resultvalidated.newpassword, salt);
+    // update the password
+    const userupdated = await user.findOneAndUpdate({ email: resultvalidated.email }, { password: hashedPassword });
+    if (!userupdated) {
+      throw new Error('Tutorial Not Found');
+    } else {
+      return res.status(StatusCodes.OK).json('password updated successfully');
+    }
+  } catch (error) {
+    return res.send(error.message);
+  }
+};
+
 const getTutorial = async (req, res) => {
   try {
     let { sorting } = req.query;
@@ -254,4 +283,5 @@ module.exports = {
   registerUser,
   loginUser,
   forgetPasswordUser,
+  resetPasswordUser,
 };

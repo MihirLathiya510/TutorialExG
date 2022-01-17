@@ -23,13 +23,21 @@ const loginUserSchema = joi.object().keys({
   email: joi.string().trim().min(6).max(256).required().email(),
   password: joi.string().min(6).required(),
 });
-const resetPasswordSchema = joi.object().keys({
+const forgetPasswordSchema = joi.object().keys({
   email: joi.string().trim().min(6).max(256).required().email(),
 });
+
+const resetPasswordSchema = joi.object().keys({
+  email: joi.string().trim().min(6).max(256).required().email(),
+  otp: joi.string().trim().min(6).required(),
+  newpassword: joi.string().trim().min(6).required(),
+});
+
 module.exports = {
   swaggerschemasPOST,
   swaggerschemasPUT,
   registerUserSchema,
   loginUserSchema,
   resetPasswordSchema,
+  forgetPasswordSchema,
 };
