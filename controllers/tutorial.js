@@ -48,6 +48,7 @@ const otpGenrator = function () {
 };
 
 // Register
+// API - Allow user to Register using username, email, password
 const registerUser = async (req, res) => {
   try {
     const resultvalidated = await validator.registerUserSchema.validateAsync(req.body);
@@ -90,7 +91,8 @@ const loginUser = async (req, res) => {
       return res.status(StatusCodes.BAD_REQUEST).send('invalid password');
     }
     // res.send(userdata[]);
-    const tokendb = jwt.sign({ _id: userdata._id }, process.env.TOKEN_SECRET);
+    // API - Login - Allow User to create a JWT token which should expire after 12 hours
+    const tokendb = jwt.sign({ _id: userdata._id }, process.env.TOKEN_SECRET, { expiresIn: '12h' });
     res.header('auth-token', tokendb);
     return res.send(tokendb);
   } catch (error) {
@@ -98,6 +100,7 @@ const loginUser = async (req, res) => {
   }
 };
 // After login
+// API - Allow User to Forgot Password. An OTP  (unique random 6 characters (numbers + alpha) )should be sent to user’s email.
 const forgetPasswordUser = async (req, res) => {
   try {
     const resultvalidated = await validator.forgetPasswordSchema.validateAsync(req.body);
@@ -117,12 +120,12 @@ const forgetPasswordUser = async (req, res) => {
       });
       tokendb.save();
     }
-    return res.status(StatusCodes.OK).send('mailed you the otp');
+    return res.status(StatusCodes.OK).send('mailed you the otp, valid fot 1 min');
   } catch (error) {
     return res.json(error.message);
   }
 };
-
+// API - Allow User to Reset Password Using OTP.
 const resetPasswordUser = async (req, res) => {
   try {
     const resultvalidated = await validator.resetPasswordSchema.validateAsync(req.body);
