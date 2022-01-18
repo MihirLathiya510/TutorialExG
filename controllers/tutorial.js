@@ -11,14 +11,14 @@ const logger = require('../loggers/prodlogger');
 const sendAnEmail = async (toEmail, otp) => {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: process.env.SERVICES,
       auth: {
-        user: 'mihirlathiya510@gmail.com',
-        pass: 'mihir@510',
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
       },
     });
     const info = await transporter.sendMail({
-      from: '"Mihir Lathiya" <mihirlathiya510@gmail.com>', // sender address
+      from: `"TutorialExG" <${process.env.EMAIL}>`, // sender address
       to: toEmail, // list of receivers
       subject: 'Resseting Password', // Subject line
       text: `your one time password`, // plain text body
@@ -108,6 +108,11 @@ const forgetPasswordUser = async (req, res) => {
     if (!userdata) {
       return res.status(StatusCodes.BAD_REQUEST).send('email doesnt exist');
     }
+    // check the email is exists or not in token
+    const otpexist = await token.findOne({ email: resultvalidated.email });
+    if (otpexist) {
+      throw new Error('you have already genrated the otp, check your email or request it after few minutes ');
+    }
     // generate an otp
     const otp = otpGenrator();
     // logger.info(otp);
@@ -119,6 +124,8 @@ const forgetPasswordUser = async (req, res) => {
         otp,
       });
       tokendb.save();
+    } else {
+      return res.send('something went wrong');
     }
     return res.status(StatusCodes.OK).send('mailed you the otp, valid fot 1 min');
   } catch (error) {
@@ -129,17 +136,24 @@ const forgetPasswordUser = async (req, res) => {
 const resetPasswordUser = async (req, res) => {
   try {
     const resultvalidated = await validator.resetPasswordSchema.validateAsync(req.body);
-    const tokendb = await token.findOne({ email: resultvalidated.email });
+    const tokendb = await token.findOne({ email: resultvalidated.email, otp: resultvalidated.otp });
     if (!tokendb) {
       return res.status(StatusCodes.BAD_REQUEST).send('have you genrated your otp? , check your email');
+    }
+    // check the previous password
+    const userdb = await user.findOne({ email: resultvalidated.email });
+    const checkpassword = await bcryptjs.compare(resultvalidated.newpassword, userdb.password);
+    if (checkpassword) {
+      throw new Error('Password should not be the same as previous one');
     }
     // encrypt the password
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(resultvalidated.newpassword, salt);
+
     // update the password
     const userupdated = await user.findOneAndUpdate({ email: resultvalidated.email }, { password: hashedPassword });
     if (!userupdated) {
-      throw new Error('Tutorial Not Found');
+      throw new Error('User Not Found');
     } else {
       return res.status(StatusCodes.OK).json('password updated successfully');
     }
