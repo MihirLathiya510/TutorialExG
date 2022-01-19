@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "commitizen": "^4.2.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -24,6 +25,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.5",
     "morgan": "~1.9.1",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0",

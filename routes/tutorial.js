@@ -1,4 +1,5 @@
 const express = require('express');
+const authToken = require('./verifytoken');
 
 const router = express.Router();
 
@@ -9,6 +10,10 @@ const {
   deleteTutorial,
   findTutorial,
   findByTitleTutorial,
+  registerUser,
+  loginUser,
+  forgetPasswordUser,
+  resetPasswordUser,
 } = require('../controllers/tutorial');
 
 /**
@@ -20,6 +25,7 @@ const {
         'description': 'Everything about managing Tutorials'
       }
     ],
+   
      'definitions': {
         'Tutorials': {
           'type': 'object',
@@ -34,8 +40,79 @@ const {
                 'type': 'boolean'
             }
           }
-        }
+        },
+         "UsersRegister": {
+          "required": [
+              "username",
+              "email",
+              "password"
+            ],
+          "properties": { 
+           "username": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          }
+        },
+        "UsersLogin": {
+          "required": [
+              "email",
+              "password"
+            ],
+          "properties": { 
+            "email": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          }
+        },
+        "UsersForgetPass": {
+          "required": [
+              "email",
+             
+            ],
+          "properties": { 
+            "email": {
+              "type": "string"
+            }
+          },
+          
+        },
+        "UsersResetPass": {
+            "required": [
+              "email",
+              "otp",
+              "newpassword",
+            ],
+            "properties": { 
+              "email": {
+                "type": "string"
+              },
+              "otp": {
+                "type": "string"
+              },
+              "newpassword": {
+                "type": "string"
+              }
+            }
+          },
       },
+      components: {
+        securitySchemes: {
+          Baerer: {
+            type: 'apiKey',
+            name: 'auth-token',
+            in: 'header'
+          }
+        }
+    },
     'paths': {
       '/tutorials': {
         'get': {
@@ -74,6 +151,9 @@ const {
 
               }
           ],
+          security: [{
+            Baerer: [],
+          }],
           'responses': {
             '200': {
               'description': 'successful operation',
@@ -108,6 +188,9 @@ const {
 
               }
           ],
+         security: [{
+            Baerer: [],
+          }],
           'responses': {
             '200': {
               'description': 'successful operation',
@@ -168,6 +251,9 @@ const {
 
               }
           ],
+          security: [{
+            Baerer: [],
+          }],
           'responses': {
             '200': {
               'description': 'successful operation',
@@ -199,6 +285,9 @@ const {
                 }
               }
           },
+          security: [{
+            Baerer: [],
+          }],
           'responses': {
             '200': {
               'description': 'successful operation',
@@ -238,6 +327,9 @@ const {
                 }
               }
           },
+          security: [{
+            Baerer: [],
+          }],
           'responses': {
             '200': {
               'description': 'successful operation',
@@ -269,6 +361,9 @@ const {
 
               }
           ],
+          security: [{
+            Baerer: [],
+          }],
           'responses': {
             '200': {
               'description': 'successful operation',
@@ -282,22 +377,164 @@ const {
             '500': {
               'description': 'some server error'
             }
+
+          }
+
+        }
+      },
+      '/tutorials/register/user': {
+        'post': {
+          'summary': 'add new user',
+          'tags': ['User'],
+
+          'requestBody': {
+              'required': true,
+              'content': {
+                'application/json': {
+                  'schema': {
+                    '$ref': '#/definitions/UsersRegister'
+                  }
+                }
+              }
+          },
+          // security: [{
+          //   Baerer: [],
+          // }],
+          'responses': {
+            '200': {
+              'description': 'successful operation',
+              'schema': {
+                '$ref': '#/definitions/UsersRegister'
+              }
+            },
+            '400': {
+              'description': 'some error'
+            },
+            '500': {
+              'description': 'some server error'
+            }
           }
         }
-      }
+      },
+      '/tutorials/login/user': {
+        'post': {
+          'summary': 'user login',
+          'tags': ['User'],
+
+          'requestBody': {
+              'required': true,
+              'content': {
+                'application/json': {
+                  'schema': {
+                    '$ref': '#/definitions/UsersLogin'
+                  }
+                }
+              }
+          },
+          // security: [{
+          //   Baerer: [],
+          // }],
+          'responses': {
+            '200': {
+              'description': 'successful operation',
+              'schema': {
+                '$ref': '#/definitions/UsersLogin'
+              }
+            },
+            '400': {
+              'description': 'some error'
+            },
+            '500': {
+              'description': 'some server error'
+            }
+          }
+        }
+      },
+      '/tutorials/forgetpassword/user': {
+        'post': {
+          'summary': 'take email from the user, sends the otp to email',
+          'tags': ['User'],
+
+          'requestBody': {
+              'required': true,
+              'content': {
+                'application/json': {
+                  'schema': {
+                    '$ref': '#/definitions/UsersForgetPass'
+                  }
+                }
+              }
+          },
+          // security: [{
+          //   Baerer: [],
+          // }],
+          'responses': {
+            '200': {
+              'description': 'successful operation',
+              'schema': {
+                '$ref': '#/definitions/UsersForgetPass'
+              }
+            },
+            '400': {
+              'description': 'some error'
+            },
+            '500': {
+              'description': 'some server error'
+            }
+          }
+        }
+      },
+      '/tutorials/resetpassword/user': {
+        'post': {
+          'summary': 'takes email and otp from the user, sets the new password',
+          'tags': ['User'],
+
+          'requestBody': {
+              'required': true,
+              'content': {
+                'application/json': {
+                  'schema': {
+                    '$ref': '#/definitions/UsersResetPass'
+                  }
+                }
+              }
+          },
+          // security: [{
+          //   Baerer: [],
+          // }],
+          'responses': {
+            '200': {
+              'description': 'successful operation',
+              'schema': {
+                '$ref': '#/definitions/UsersResetPass'
+              }
+            },
+            '400': {
+              'description': 'some error'
+            },
+            '500': {
+              'description': 'some server error'
+            }
+          }
+        }
+      },
     }
   }
 */
 
 // get
-router.get('/', getTutorial);
-router.get('/:id', findTutorial);
-router.get('/search/:title', findByTitleTutorial);
+router.get('/', authToken, getTutorial);
+router.get('/:id', authToken, findTutorial);
+router.get('/search/:title', authToken, findByTitleTutorial);
 // post
-router.post('/post', postTutorial);
+router.post('/post', authToken, postTutorial);
+router.post('/register/user', registerUser);
+router.post('/login/user', loginUser);
+router.post('/forgetpassword/user', forgetPasswordUser);
+router.post('/resetpassword/user', resetPasswordUser);
 // put
-router.put('/put/:id', putTutorial);
+router.put('/put/:id', authToken, putTutorial);
 // delete
-router.delete('/delete/:id', deleteTutorial);
+router.delete('/delete/:id', authToken, deleteTutorial);
 
 module.exports = router;
