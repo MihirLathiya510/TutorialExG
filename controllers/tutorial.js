@@ -1,51 +1,14 @@
 const { StatusCodes } = require('http-status-codes');
 const bcryptjs = require('bcryptjs');
-const nodemailer = require('nodemailer');
 const jwt = require('jsonwebtoken');
 const tutorial = require('../models/tutorial');
 const user = require('../models/user');
 const token = require('../models/token');
 const validator = require('../helpers/validator');
+const emailer = require('../helpers/emailsender');
+const otpGenrator = require('../helpers/otpgenerator');
+
 const logger = require('../loggers/prodlogger');
-
-const sendAnEmail = async (toEmail, otp) => {
-  try {
-    const transporter = nodemailer.createTransport({
-      service: process.env.SERVICES,
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-      },
-    });
-    const info = await transporter.sendMail({
-      from: `"TutorialExG" <${process.env.EMAIL}>`, // sender address
-      to: toEmail, // list of receivers
-      subject: 'Resseting Password', // Subject line
-      text: `your one time password`, // plain text body
-      html: `<b>your one time password is : ${otp}</b>`, // html body
-    });
-    // return info;
-    // logger.info(info.messageId);
-    return info.messageId;
-  } catch (error) {
-    // console.log(error.message);
-    return error.message;
-  }
-};
-const otpGenrator = function () {
-  const characters = 'ABCDEFGHIJLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  const numbers = '0123456789';
-  let result = '';
-  const charactersLength = characters.length;
-  const numberslength = numbers.length;
-
-  for (let i = 0; i < 3; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    result += numbers.charAt(Math.floor(Math.random() * numberslength));
-  }
-
-  return result;
-};
 
 // Register
 // API - Allow user to Register using username, email, password
@@ -71,7 +34,7 @@ const registerUser = async (req, res) => {
     });
     userdb.save();
     if (userdb) {
-      return res.status(StatusCodes.OK).json({ userdb });
+      return res.status(StatusCodes.OK).send('user registered successfully');
     }
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('something went wrong');
   } catch (error) {
@@ -114,10 +77,10 @@ const forgetPasswordUser = async (req, res) => {
       throw new Error('you have already genrated the otp, check your email or request it after few minutes ');
     }
     // generate an otp
-    const otp = otpGenrator();
+    const otp = otpGenrator;
     // logger.info(otp);
     // send an email with otp
-    const info = await sendAnEmail(userdata.email, otp);
+    const info = await emailer(userdata.email, otp);
     if (info && otp) {
       const tokendb = await token({
         email: userdata.email,
